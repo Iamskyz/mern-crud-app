@@ -6,6 +6,7 @@ const Users = () => {
 
 const [users,setUsers] = useState([]);
 
+//fetch all users
 const fetchUsers = async ()=>{
  const res = await axios.get("http://localhost:5000/api/users");
  setUsers(res.data);
