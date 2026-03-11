@@ -13,7 +13,7 @@ const navigate = useNavigate();
 const handleSubmit = async(e)=>{
  e.preventDefault();
 
- await axios.post("/api",{
+ await axios.post("http://localhost:5000/api/users/add",{
   name,email,age
  });
 
