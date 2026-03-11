@@ -5,6 +5,7 @@ import dns from 'dns'
 import userRoutes from './routes/userRoutes.js'
 
 const app = express()
+const port = 5000;
 
 dns.setServers(["8.8.8.8", "1.1.1.1"])
 
@@ -21,6 +22,6 @@ app.get('/', (req, res) => {
 // routes
 app.use('/api/users', userRoutes)
 
-app.listen(5000, () => {
-    console.log('Server is running on port 5000')
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
 })
