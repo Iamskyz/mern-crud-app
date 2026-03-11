@@ -8,7 +8,7 @@ const [users,setUsers] = useState([]);
 
 //fetch all users
 const fetchUsers = async ()=>{
- const res = await axios.get("http://localhost:5000/api/users");
+ const res = await axios.get("/api");
  setUsers(res.data);
 };
 
@@ -18,7 +18,7 @@ useEffect(()=>{
 
 
 const deleteUser = async(id)=>{
- await axios.delete(`http://localhost:5000/api/users/${id}`);
+ await axios.delete(`/api/${id}`);
  fetchUsers();
 }
 

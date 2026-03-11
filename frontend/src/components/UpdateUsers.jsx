@@ -18,7 +18,7 @@ useEffect(() => {
 const fetchUser = async () => {
   try{
 
-    const res = await axios.get(`http://localhost:5000/api/users`);
+    const res = await axios.get(`/api`);
 
     const user = res.data.find((u)=> u._id === id);
 
